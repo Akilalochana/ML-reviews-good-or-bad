@@ -3,10 +3,10 @@ from transformers import pipeline
 
 app = Flask(__name__)
 
-# Load sentiment model
+# Load the smaller, public sentiment model
 sentiment_pipeline = pipeline(
-    "sentiment-analysis", 
-    model="distilbert-base-uncased-finetuned-sst-2-english"
+    "sentiment-analysis",
+    model="cardiffnlp/twitter-roberta-base-sentiment-latest"
 )
 
 @app.route('/analyze', methods=['POST'])
