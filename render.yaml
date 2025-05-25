@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: sentiment-api
+    runtime: python
+    buildCommand: ""
+    startCommand: python app.py
+    envVars:
+      - key: WEB_CONCURRENCY
+        value: "1"
